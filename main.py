@@ -1,12 +1,11 @@
-
 def count_batteries_by_health(present_capacities):
-  rated_capacity = 120
-  counts= {
-    "healthy": 0,
-    "exchange": 0,
-    "failed": 0
-  }
-  for capacity in present_capacities:
+    rated_capacity = 120
+    counts= {
+      "healthy": 0,
+      "exchange": 0,
+      "failed": 0
+    }
+    for capacity in present_capacities:
         # Calculate SoH percentage
         soh_percentage = 100 * capacity / rated_capacity
         
@@ -40,5 +39,3 @@ def test_bucketing_by_health():
 
 if __name__ == '__main__':
   test_bucketing_by_health()
-
-
